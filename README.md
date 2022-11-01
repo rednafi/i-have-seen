@@ -72,7 +72,7 @@ on:
 
 jobs:
   add-issue-comment:
-    uses: ./
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@v1
     with:
       message: |
         Simple comment **works**.
@@ -81,7 +81,7 @@ jobs:
       where: "issues"
 
   add-pr-comment:
-    uses: ./
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@v1
     with:
       message: |
         Simple comment **works**.
