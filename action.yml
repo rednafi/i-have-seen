@@ -1,0 +1,17 @@
+name: i-have-seen
+author: rednafi
+description: |
+  Automatically add a single comment every time an ISSUE or a PULL REQUEST is created.
+inputs:
+  message:
+    description: |
+      Message that will be added as an issue or pull request comment.
+        Supports multi-line markdown syntax.
+    default: I have seen @$(date -u --rfc-3339=s)
+    required: false
+
+  where:
+    description: |
+      Where the comment should be posted. Supports 'issues' and 'pull_request'.
+    default: issues
+    required: false
