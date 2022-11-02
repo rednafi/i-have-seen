@@ -4,15 +4,29 @@ on:
   workflow_call:
     inputs:
       message:
-        description: "Message that should be attached to the issue or pull request."
+        description: "Message body that should be attached to an issue or a pull request."
         default: "I have seen"
         required: false
         type: string
 
+      where:
+        description: "Where to post the message. e.g on an issue or a pull request."
+        default: "issue"
+        required: false
+        type: string
+
 jobs:
-  build:
+  send-message:
     runs-on: ubuntu-latest
+    env:
+      MESSAGE: ${{ inputs.message }} @$(date -u --rfc-3339=s).
     steps:
-      - name: Send message
+      - name: Add message as an issue comment.
+        if: ${{ inputs.where == 'issue' }}
         run:
-          echo ${{ inputs.message }} @$(date -u --rfc-3339=s).
+          echo $MESSAGE in issue
+
+      - name: Add message as a pull request comment.
+        if: ${{ inputs.where == 'pull_request' }}
+        run:
+          echo $MESSAGE in pull request

@@ -3,7 +3,6 @@ name: CI
 on:
   push:
 
-
 jobs:
   call-workflow-passing-data:
     uses: rednafi/i-have-seen/.github/workflows/seen.yml@dev
