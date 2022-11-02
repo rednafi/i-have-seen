@@ -1,0 +1,7 @@
+name: CI
+
+jobs:
+  call-workflow-passing-data:
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@dev
+    with:
+      message: This is a custom message
