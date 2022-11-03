@@ -29,10 +29,10 @@ jobs:
         run:
           curl --request POST \
           --url https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$EVENT_NUMBER/comments \
-          --header "authorization: Bearer $GITHUB_TOKEN" \
+          --header 'authorization: Bearer "$GITHUB_TOKEN"' \
           --header "content-type: application/json" \
-          -d '{"body":"$MESSAGE"}'
-          --fail
+          -d '{"body":"$MESSAGE"}' \
+          --fail && \
           echo ${{ github.event_name }}
 
       # - name: Add message as a pull request comment.
