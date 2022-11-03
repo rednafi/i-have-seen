@@ -2,6 +2,7 @@ name: CI
 
 on:
   issues:
+  push:
 
 jobs:
   call-workflow-passing-data:
