@@ -2,9 +2,6 @@ name: CI
 
 on:
   issues:
-    types:
-      - opened
-      - labeled
 
 
 jobs:
