@@ -11,7 +11,7 @@ on:
 
       where:
         description: "Where to post the message. e.g on an issue or a pull request."
-        default: "issue"
+        default: "issues"
         required: false
         type: string
 
@@ -25,7 +25,7 @@ jobs:
       EVENT_NUMBER: ${{ github.event.number }} # e.g. event or pull request number.
     steps:
       - name: Add message as an issue comment.
-        if: ${{ inputs.where == 'issue' }}
+        if: ${{ inputs.where == 'issues' }}
         run: |
           curl --request POST \
           --url https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$EVENT_NUMBER/comments \

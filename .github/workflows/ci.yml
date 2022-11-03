@@ -9,3 +9,4 @@ jobs:
     uses: rednafi/i-have-seen/.github/workflows/seen.yml@dev
     with:
       message: This is a custom message
+      where: "issues"
