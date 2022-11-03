@@ -19,7 +19,7 @@ jobs:
   send-message:
     runs-on: ubuntu-latest
     env:
-      MESSAGE: ${{ inputs.message }}.
+      MESSAGE: ${{ inputs.message }}
       GITHUB_REPOSITORY: ${{ github.repository }}  # e.g. ococat/hello-world
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       EVENT_NUMBER: ${{ github.event.number }} # e.g. event or pull request number.
@@ -35,7 +35,7 @@ jobs:
           --fail
           echo ${{ github.event_name }}
 
-      - name: Add message as a pull request comment.
-        if: ${{ inputs.where == 'pull_request' && github.event_name == 'pull_request' }}
-        run:
-          echo $MESSAGE in pull request
+      # - name: Add message as a pull request comment.
+      #   if: ${{ inputs.where == 'pull_request' && github.event_name == 'pull_request' }}
+      #   run:
+      #     echo $MESSAGE in pull request
