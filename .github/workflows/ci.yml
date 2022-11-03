@@ -2,7 +2,10 @@ name: CI
 
 on:
   issues:
-  push:
+    types:
+      - opened
+      - labeled
+
 
 jobs:
   call-workflow-passing-data:
