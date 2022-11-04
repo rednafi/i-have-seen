@@ -9,5 +9,8 @@ jobs:
   call-workflow-passing-data:
     uses: rednafi/i-have-seen/.github/workflows/seen.yml@main
     with:
-      message: This is a custom message
+      message: |
+        This is a custom *multiline* markdown **message**
+        * List 1
+        * List 2
       where: "issues"
