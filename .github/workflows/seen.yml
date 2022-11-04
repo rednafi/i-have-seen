@@ -35,7 +35,7 @@ jobs:
           # --fail
 
           pull_number=$(jq --raw-output .issues.number "$GITHUB_EVENT_PATH")
-          echo $GITHUB_EVENT_PATH
+          cat $GITHUB_EVENT_PATH
           echo $pull_number
 
       # - name: Add message as a pull request comment.
