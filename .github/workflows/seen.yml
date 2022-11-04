@@ -29,7 +29,7 @@ jobs:
         run: |
           issue_number=$(jq --raw-output .issue.number "$GITHUB_EVENT_PATH")
 
-          echo $MESSAGE
+          echo -E "$MESSAGE"
 
           curl --request POST \
           --url "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$issue_number/comments" \
