@@ -6,7 +6,7 @@ on:
       - opened
 
 jobs:
-  call-workflow-passing-data:
+  add-issue-comment:
     uses: rednafi/i-have-seen/.github/workflows/seen.yml@main
     with:
       message: |
