@@ -9,5 +9,8 @@ jobs:
   add-issue-comment:
     uses: rednafi/i-have-seen/.github/workflows/seen.yml@main
     with:
-      message: This is a test message
+      message: |
+        This is a **multiline** issue *message* that uses ~markdown~.\
+        * List item 1
+        * List item 2
       where: "issues"

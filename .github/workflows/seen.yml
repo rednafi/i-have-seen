@@ -28,8 +28,7 @@ jobs:
         if: ${{ inputs.where == 'issues' && github.event_name == 'issues'}}
         run: |
           issue_number=$(jq --raw-output .issue.number "$GITHUB_EVENT_PATH")
-          echo $MESSAGE
-
+          
           curl --request POST \
           --url "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$issue_number/comments" \
           --header "authorization: Bearer $GITHUB_TOKEN" \
