@@ -5,7 +5,7 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: rednafi/i-have-seen/.github/workflows/seen.yml@dev
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@main
     with:
       message: This is a custom message
       where: "issues"
