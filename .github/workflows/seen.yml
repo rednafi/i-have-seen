@@ -30,12 +30,12 @@ jobs:
           issue_number=$(jq --raw-output .issue.number "$GITHUB_EVENT_PATH")
           echo $issue_number
 
-          # curl --request POST \
-          # --url https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$issue_number/comments \
-          # --header 'authorization: Bearer "$GITHUB_TOKEN"' \
-          # --header "content-type: application/json" \
-          # -d '{"body":"$MESSAGE"}' \
-          # --fail
+          curl --request POST \
+          --url https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$issue_number/comments \
+          --header "authorization: Bearer $GITHUB_TOKEN" \
+          --header "content-type: application/json" \
+          -d '{"body":"$MESSAGE"}' \
+          --fail
 
       # - name: Add message as a pull request comment.
       #   if: ${{ inputs.where == 'pull_request' && github.event_name == 'pull_request' }}
