@@ -2,9 +2,6 @@ name: CI
 
 on:
   issues:
-  # issue comment
-  issue_comment:
-
 
 jobs:
   call-workflow-passing-data:
