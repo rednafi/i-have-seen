@@ -27,12 +27,6 @@ jobs:
       - name: Add message as an issue comment.
         if: ${{ inputs.where == 'issues' && github.event_name == 'issues'}}
         run: |
-          # curl --request POST \
-          # --url https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$EVENT_NUMBER/comments \
-          # --header 'authorization: Bearer "$GITHUB_TOKEN"' \
-          # --header "content-type: application/json" \
-          # -d '{"body":"$MESSAGE"}' \
-          # --fail
           echo $GITHUB_TOKEN
           echo ${{ github.event_name }}
           echo $EVENT_NUMBER
