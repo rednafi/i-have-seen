@@ -33,9 +33,10 @@ jobs:
           # --header "content-type: application/json" \
           # -d '{"body":"$MESSAGE"}' \
           # --fail
-          echo $GITHUB_TOKEN
-          echo ${{ github.event_name }}
-          echo $EVENT_NUMBER
+
+          pull_number=$(jq --raw-output .issues.number "$GITHUB_EVENT_PATH")
+          echo $GITHUB_EVENT_PATH
+          echo $pull_number
 
       # - name: Add message as a pull request comment.
       #   if: ${{ inputs.where == 'pull_request' && github.event_name == 'pull_request' }}
