@@ -38,8 +38,8 @@ jobs:
           EOF
 
       - name: Add message as a pull request comment.
-        if: ${{ inputs.where == 'pull_request' && github.event_name == 'pull_request' }}
-        run:
+        if: ${{ inputs.where == 'pull_request' && github.event_name == 'pull_request'}}
+        run: |
           pr_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
           curl --request POST \
           --url "https://api.github.com/repos/$GITHUB_REPOSITORY/pulls/$pr_number/comments" \
