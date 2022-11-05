@@ -1,7 +1,7 @@
 name: Attach comments to issues or pull requests.
 author: Redowan Delowar
 description: |
-  Automatically add a single comment everytime an ISSUE or a PULL REQUEST is created.
+  Automatically add a single comment every time an ISSUE or a PULL REQUEST is created.
 
 on:
   workflow_call:
