@@ -1,4 +1,7 @@
-name: Attach "I have seen" messages to issues or pull requests.
+name: Attach comments to issues or pull requests.
+author: Redowan Delowar
+description: |
+  Automatically add a single comment everytime an ISSUE or a PULL REQUEST is created.
 
 on:
   workflow_call:
