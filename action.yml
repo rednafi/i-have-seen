@@ -15,3 +15,7 @@ inputs:
       Where the comment should be posted. Supports 'issues' and 'pull_request'.
     default: issues
     required: false
+
+branding:
+  icon: 'alert-octagon'
+  color: 'gray-dark'
