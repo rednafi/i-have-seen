@@ -7,10 +7,12 @@ on:
   pull_request:
     types:
       - opened
+env:
+  version: "main"
 
 jobs:
   add-issue-comment:
-    uses: rednafi/i-have-seen/.github/workflows/seen.yml@main
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@$version
     with:
       message: |
         Simple comment **works**.
@@ -19,7 +21,7 @@ jobs:
       where: "issues"
 
   add-pr-comment:
-    uses: rednafi/i-have-seen/.github/workflows/seen.yml@main
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@$version
     with:
       message: |
         Simple comment **works**.
