@@ -4,6 +4,9 @@ on:
   issues:
     types:
       - opened
+  pull_request:
+    types:
+      - opened
 
 jobs:
   add-issue-comment:
@@ -14,3 +17,12 @@ jobs:
         This is another ~line~.
 
       where: "issues"
+
+  add-pr-comment:
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@main
+    with:
+      message: |
+        Simple comment **works**.
+        This is another ~line~.
+
+      where: "pull_request"
