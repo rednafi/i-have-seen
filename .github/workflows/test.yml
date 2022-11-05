@@ -10,7 +10,7 @@ on:
 
 jobs:
   add-issue-comment:
-    uses: ./.github/workflows/seen.yml
+    uses: rednafi/i-have-seen@v1
     with:
       message: |
         Simple comment **works**.
@@ -19,7 +19,7 @@ jobs:
       where: "issues"
 
   add-pr-comment:
-    uses: ./.github/workflows/seen.yml
+    uses: rednafi/i-have-seen@v1
     with:
       message: |
         Simple comment **works**.
