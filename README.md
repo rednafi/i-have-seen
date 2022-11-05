@@ -58,7 +58,7 @@ Upon the creation of a pull request, a comment will appear as follows:
 
 ### Add both issue & pull request comments
 
-
+This can be seen in action [here][example].
 ```yml
 name: CI
 
@@ -93,3 +93,4 @@ jobs:
 
 [issue-comment]: https://user-images.githubusercontent.com/30027932/200104205-62ab9ada-13b7-4a04-94e5-2a1913b1e569.png
 [pr-comment]: https://user-images.githubusercontent.com/30027932/200104282-9a574966-6e08-487e-b5f2-3b4c7607e0a6.png
+[example]: /.github/workflows/test.yml
