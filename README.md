@@ -27,6 +27,9 @@ jobs:
 
 Whenever an issue is created, action-bot will add a comment like this:
 
+![issue-comment][issue-comment]
+
+
 ### Add a pull request comment
 
 ```yml
@@ -48,4 +51,9 @@ jobs:
       where: "pull_request"
 ```
 
-A comment like
+Upon the creation of a pull request, a comment will appear as follows:
+
+
+
+
+[issue-comment]: https://user-images.githubusercontent.com/30027932/200104205-62ab9ada-13b7-4a04-94e5-2a1913b1e569.png
