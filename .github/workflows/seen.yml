@@ -41,7 +41,7 @@ jobs:
         if: ${{ inputs.where == 'pull_request' && github.event_name == 'pull_request'}}
         run: |
           # PRs are a flavor of issues. So the same 'issues/<number>/comments' API works.
-          issue_number=$(jq --raw-output .issue.number "$GITHUB_EVENT_PATH")
+          issue_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
           curl --request POST \
           --url "https://api.github.com/repos/$GITHUB_REPOSITORY/issues/$issue_number/comments" \
           --header "authorization: Bearer $GITHUB_TOKEN" \
