@@ -10,8 +10,7 @@ on:
 
 jobs:
   add-issue-comment:
-    id: issue-comment
-    uses: ./
+    uses: ./.github/worflows/seen.yml
     with:
       message: |
         Simple comment **works**.
@@ -20,8 +19,7 @@ jobs:
       where: "issues"
 
   add-pr-comment:
-    id: pr-comment
-    uses: ./
+    uses: ./.github/workflows/seen.yml
     with:
       message: |
         Simple comment **works**.
