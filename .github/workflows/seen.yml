@@ -24,6 +24,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GITHUB_EVENT_PATH: $GITHUB_EVENT_PATH # e.g. event or pull request number.
     steps:
+      - id: issue-comment
       - name: Add message as an issue comment.
         if: ${{ inputs.where == 'issues' && github.event_name == 'issues'}}
         run: |
@@ -37,6 +38,7 @@ jobs:
           { "body": "$MESSAGE" }
           EOF
 
+      - id: pr-comment
       - name: Add message as a pull request comment.
         if: ${{ inputs.where == 'pull_request' && github.event_name == 'pull_request'}}
         run: |

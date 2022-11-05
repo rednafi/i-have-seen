@@ -10,7 +10,8 @@ on:
 
 jobs:
   add-issue-comment:
-    uses: rednafi/i-have-seen@v1
+    id: issue-comment
+    uses: ./
     with:
       message: |
         Simple comment **works**.
@@ -19,7 +20,8 @@ jobs:
       where: "issues"
 
   add-pr-comment:
-    uses: rednafi/i-have-seen@v1
+    id: pr-comment
+    uses: ./
     with:
       message: |
         Simple comment **works**.
