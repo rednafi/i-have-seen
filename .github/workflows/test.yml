@@ -10,7 +10,7 @@ on:
 
 jobs:
   add-issue-comment:
-    uses: ./.github/worflows/seen.yml
+    uses: ./.github/workflows/seen.yml
     with:
       message: |
         Simple comment **works**.
