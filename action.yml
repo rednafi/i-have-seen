@@ -17,5 +17,5 @@ inputs:
     required: false
 
 branding:
-  icon: 'alert-octagon'
-  color: 'gray-dark'
+  icon: "alert-octagon"
+  color: "gray-dark"
