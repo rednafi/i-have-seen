@@ -10,19 +10,23 @@ on:
 
 jobs:
   add-issue-comment:
-    uses: rednafi/i-have-seen@v1
-    with:
-      message: |
-        Simple comment **works**.
-         This is another ~line~.
+    steps:
+      - name: Issue comment
+        uses: rednafi/i-have-seen@v1
+        with:
+          message: |
+            Simple comment **works**.
+            This is another ~line~.
 
-      where: "issues"
+          where: "issues"
 
   add-pr-comment:
-    uses: rednafi/i-have-seen@v1
-    with:
-      message: |
-        Simple comment **works**.
-         This is another ~line~.
+    steps:
+      - name: PR comment
+        uses: rednafi/i-have-seen@v1
+        with:
+          message: |
+            Simple comment **works**.
+            This is another ~line~.
 
-      where: "pull_request"
+          where: "pull_request"
