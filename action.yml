@@ -16,6 +16,16 @@ inputs:
     default: issues
     required: false
 
+runs:
+  using: "composite"
+  steps:
+    - name: Issue comment
+      uses: rednafi/i-have-seen@v1
+      with:
+        message: |
+          This is a **markdown** message.
+        where: issues
+
 branding:
   icon: "alert-octagon"
   color: "gray-dark"
