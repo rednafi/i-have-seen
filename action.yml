@@ -20,7 +20,7 @@ runs:
   using: "composite"
   steps:
     - name: Issue comment
-      uses: rednafi/i-have-seen@v1
+      uses: rednafi/i-have-seen@main
       with:
         message: |
           This is a **markdown** message.
