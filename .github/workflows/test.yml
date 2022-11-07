@@ -10,6 +10,7 @@ on:
 
 jobs:
   add-issue-comment:
+    runs-on: ubuntu-latest
     steps:
       - name: Issue comment
         uses: rednafi/i-have-seen@v1
@@ -21,6 +22,7 @@ jobs:
           where: "issues"
 
   add-pr-comment:
+    runs-on: ubuntu-latest
     steps:
       - name: PR comment
         uses: rednafi/i-have-seen@v1
