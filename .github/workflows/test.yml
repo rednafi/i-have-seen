@@ -12,8 +12,7 @@ jobs:
   add-issue-comment:
     runs-on: ubuntu-latest
     steps:
-      - name: Issue comment
-        uses: rednafi/i-have-seen@main
+      - uses: rednafi/i-have-seen@main
         with:
           message: |
             Simple comment **works**.
@@ -24,8 +23,7 @@ jobs:
   add-pr-comment:
     runs-on: ubuntu-latest
     steps:
-      - name: PR comment
-        uses: rednafi/i-have-seen@main
+      - uses: rednafi/i-have-seen@main
         with:
           message: |
             Simple comment **works**.
