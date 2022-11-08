@@ -18,11 +18,7 @@ inputs:
 
 runs:
   using: "composite"
-  steps:
-    - uses: ./
-      with:
-        message: This is a markdown **message**.
-        where: "issues"
+  main: workflows/seen.yml
 
 branding:
   icon: "alert-octagon"
