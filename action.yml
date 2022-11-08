@@ -19,7 +19,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: rednafi/i-have-seen@main
+    - uses: rednafi/i-have-seen@v1
       with:
         message: This is a markdown **message**.
         where: "issues"
