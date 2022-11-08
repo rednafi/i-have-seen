@@ -17,6 +17,7 @@ inputs:
     required: false
 
 runs:
+  uses: "composite"
   steps:
     - uses: rednafi/i-have-seen@main
       with:
