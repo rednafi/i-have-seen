@@ -19,8 +19,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v3
-    - uses: rednafi/i-have-seen/.github/workflows/seen.yml@main
+    - uses: ./
       with:
         message: This is a markdown **message**.
         where: "issues"
