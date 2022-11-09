@@ -16,10 +16,6 @@ inputs:
     default: issues
     required: false
 
-runs:
-  using: "composite"
-  main: workflows/seen.yml
-
 branding:
   icon: "alert-octagon"
   color: "gray-dark"

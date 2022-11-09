@@ -10,23 +10,19 @@ on:
 
 jobs:
   add-issue-comment:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: rednafi/i-have-seen@main
-        with:
-          message: |
-            Simple comment **works**.
-            This is another ~line~.
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@v1
+    with:
+      message: |
+        Simple comment **works**.
+         This is another ~line~.
 
-          where: "issues"
+      where: "issues"
 
   add-pr-comment:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: rednafi/i-have-seen@main
-        with:
-          message: |
-            Simple comment **works**.
-            This is another ~line~.
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@v1
+    with:
+      message: |
+        Simple comment **works**.
+         This is another ~line~.
 
-          where: "pull_request"
+      where: "pull_request"
