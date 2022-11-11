@@ -3,13 +3,14 @@ name: Test
 on:
   issues:
     types:
-      - opened
+      - labeled
   pull_request:
     types:
-      - opened
+      - labeled
 
 jobs:
   add-issue-comment:
+    if: ${{ github.event.label.name == 'bug' }}
     uses: rednafi/i-have-seen/.github/workflows/seen.yml@v1
     with:
       message: |
@@ -19,6 +20,7 @@ jobs:
       where: "issues"
 
   add-pr-comment:
+    if: ${{ github.event.label.name == 'bug' }}
     uses: rednafi/i-have-seen/.github/workflows/seen.yml@v1
     with:
       message: |
