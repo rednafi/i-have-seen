@@ -90,6 +90,44 @@ jobs:
       where: "pull_request"
 ```
 
+### Add comments only when an issue or a pull request contains a specific label
+
+The following CI snippet will make sure that a comment will be added to the issue or
+pull request only when it's is labeled with `bug`:
+
+```yml
+name: Test
+
+on:
+  issues:
+    types:
+      - labeled
+  pull_request:
+    types:
+      - labeled
+
+jobs:
+  add-issue-comment:
+    if: ${{ github.event.label.name == "bug" }}
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@v1
+    with:
+      message: |
+        Simple comment **works**.
+         This is another ~line~.
+
+      where: "issues"
+
+  add-pr-comment:
+    if: ${{ github.event.label.name == "bug" }}
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@v1
+    with:
+      message: |
+        Simple comment **works**.
+         This is another ~line~.
+
+      where: "pull_request"
+```
+
 [issue-comment]: https://user-images.githubusercontent.com/30027932/200104205-62ab9ada-13b7-4a04-94e5-2a1913b1e569.png
 [pr-comment]: https://user-images.githubusercontent.com/30027932/200104282-9a574966-6e08-487e-b5f2-3b4c7607e0a6.png
 [example]: /.github/workflows/test.yml
