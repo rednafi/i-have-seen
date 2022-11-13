@@ -11,7 +11,7 @@ on:
 jobs:
   add-issue-comment:
     if: ${{ github.event.label.name == 'bug' }}
-    uses: rednafi/i-have-seen/.github/workflows/seen.yml@v1
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@v2
     with:
       message: |
         Simple comment **works**.
@@ -21,7 +21,7 @@ jobs:
 
   add-pr-comment:
     if: ${{ github.event.label.name == 'bug' }}
-    uses: rednafi/i-have-seen/.github/workflows/seen.yml@v1
+    uses: rednafi/i-have-seen/.github/workflows/seen.yml@v2
     with:
       message: |
         Simple comment **works**.
