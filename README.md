@@ -5,7 +5,7 @@ align="right" width="128" height="128">
 </h1>
 
 ***\>>
-Workflow to automatically add a comment when an issue or a pull request is opened
+Workflow to add a comment when an issue or a pull request is opened
 \<<***
 
 ![actions-badge]
